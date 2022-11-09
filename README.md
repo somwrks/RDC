@@ -24,3 +24,6 @@ Home, Registration, About, Contact Us
 
 
 Frameworks we using: ReactJs, Sanity
+
+
+![image](https://user-images.githubusercontent.com/85481905/200872042-8e7acf27-606a-43e3-8eb1-35bc35bc1e30.png)
