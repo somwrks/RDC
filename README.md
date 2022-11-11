@@ -28,3 +28,5 @@ Frameworks we using: ReactJs, Sanity
 **The Login auth at the extreme right of navbar means only for the admin, not for the local client**
 
 ![image](https://user-images.githubusercontent.com/85481905/200872042-8e7acf27-606a-43e3-8eb1-35bc35bc1e30.png)
+
+![image](https://user-images.githubusercontent.com/85481905/201320059-b186ed1c-bbdd-446f-9e15-7297381e27bb.png)
