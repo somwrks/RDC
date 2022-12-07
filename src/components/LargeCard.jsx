@@ -3,7 +3,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { FcBusinessman } from "react-icons/fc";
 const LargeCard = () => {
   return (
-    <div className="px-10 py-5">
+    <div className="px-5 py-5">
       <h1 className="text-[#225dba] px-5 ">Welcome Aboard</h1>
       <div className="flex justify-between py-5">
         <div className="text-6xl font-semibold ">
@@ -28,12 +28,20 @@ const LargeCard = () => {
             </p>
           </div>
         </div>
-        <div className="">
-          <p>a image will be placed</p>
-          {/* <img
-            className="w-96 scale-125 object-contain"
-            src="https://cdn.sanity.io/images/mrfd4see/production/85a728494b58ce87f547a44aa0c9149aea437570-500x333.png?w=2000&fit=max&auto=format"
-          /> */}
+        <div className="relative">
+          <p>image</p>
+          {/* <div className=" bg-gradient-to-tr py-5 rounded-r-lg  from-blue-700 to-blue-300 rounded-tl-full ">
+            <img
+              className="w-96 scale-125 object-contain"
+              src="https://cdn.sanity.io/images/mrfd4see/production/85a728494b58ce87f547a44aa0c9149aea437570-500x333.png?w=2000&fit=max&auto=format"
+            />
+          </div>
+          <div className="bg-white absolute  shadow-lg shadow-black/30 ml-60">
+            <img
+              className="w-20 object-contain rounded-full "
+              src="https://cdn.sanity.io/images/mrfd4see/production/85a728494b58ce87f547a44aa0c9149aea437570-500x333.png?w=2000&fit=max&auto=format"
+            />
+          </div> */}
         </div>
       </div>
       <div className="bg-gradient-to-r mt-14 to-blue-300 rounded-t-3xl from-blue-700 via-[#3453ff] flex px-14 py-10 justify-between">
