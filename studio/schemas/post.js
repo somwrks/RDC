@@ -1,0 +1,48 @@
+import {defineField, defineType} from 'sanity'
+
+export default defineType({
+  name: 'appointment',
+  title: 'Appointment',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'reason',
+      title: 'Reason',
+      type: 'string',
+    }),
+    defineField({
+      name: 'paitent_name',
+      title: 'paitent name',
+      type: 'string',
+    }),
+
+    defineField({
+      name: 'doctor',
+      title: 'Type of Doctor',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'category'}}],
+    }),
+    defineField({
+      name: 'date',
+      title: 'Date',
+      type: 'string',
+    }),
+    // defineField({
+    //   name: 'body',
+    //   title: 'Body',
+    //   type: 'blockContent',
+    // }),
+  ],
+
+  // preview: {
+  //   select: {
+  //     title: 'title',
+  //     author: 'author.name',
+  //     media: 'mainImage',
+  //   },
+  //   prepare(selection) {
+  //     const {author} = selection
+  //     return {...selection, subtitle: author && `by ${author}`}
+  //   },
+  // },
+})
