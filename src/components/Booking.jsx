@@ -9,17 +9,17 @@ const sanityClient = client({
 });
 
 const Booking = () => {
-  console.log(projectId);
   const [paitentName, setPaitentName] = useState("");
   const [reason, setReason] = useState("");
+  console.log(process.env.REACT_SANITY_DATASET);
 
   async function mutate(mutations) {
     const result = await fetch(
-      `https://${this.props.projectId}.api.sanity.io/v2021-06-07/data/mutate/${this.props.dataset}`,
+      `https://0idhl247.api.sanity.io/v2021-06-07/data/mutate/production`,
       {
         headers: {
           "content-type": "application/json",
-          Authorization: `Bearer ${this.props.apiKey}`,
+          Authorization: `Bearer skzx0CQViU2qRjOG3COuau1pEl9cphvOhjRnM7JGHblYGgVZfn7uprLiaRrtqnYE9krLkXo7WK7XIICkCt0dSIlurQRp20wUFKLWef93XcpD44qIIspzG1Y3HMzZ7W93NzrdM4AqQmvwsdZXueDJ5rPOjtfy6UcRKMoEsvmArcybvy8Cmr6v`,
         },
         body: JSON.stringify(mutations),
         method: "POST",
