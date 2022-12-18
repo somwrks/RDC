@@ -6,7 +6,7 @@ function Doctor() {
   return (
     <div className="max-w-7xl mx-auto">
       <Header />
-      <Booking apiKey={apiKey} projectId={projectId} dataset={dataset} />
+      <Booking />
     </div>
   );
 }
