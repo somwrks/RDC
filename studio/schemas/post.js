@@ -16,23 +16,38 @@ export default defineType({
       type: 'string',
     }),
 
-    defineField({
-      name: 'doctor',
-      title: 'Type of Doctor',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
-    defineField({
-      name: 'date',
-      title: 'Date',
-      type: 'string',
-    }),
+    // defineField({
+    //   name: 'doctor',
+    //   title: 'Type of Doctor',
+    //   type: 'array',
+    //   of: [{type: 'reference', to: {type: 'category'}}],
+    // }),
+    // defineField({
+    //   name: 'date',
+    //   title: 'Date',
+    //   type: 'string',
+    // }),
     // defineField({
     //   name: 'body',
     //   title: 'Body',
     //   type: 'blockContent',
     // }),
   ],
+  // mutations: [
+  //   defineMutation({
+  //     name: 'updateAppointmentPaitentName',
+  //     description: 'Updates the paitent name field of an appointment document',
+  //     args: {
+  //       id: 'ID!',
+  //       paitentName: 'String!',
+  //     },
+  //     type: 'appointment',
+  //     resolve: (root, args, context) => {
+  //       const {id, paitentName} = args
+  //       return context.patch(id).set({paitent_name: paitentName}).commit()
+  //     },
+  //   }),
+  // ],
 
   // preview: {
   //   select: {

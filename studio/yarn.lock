@@ -1423,6 +1423,17 @@
     object-assign "^4.1.1"
     rxjs "^6.0.0"
 
+"@sanity/client@^4.0.0-alpha.esm.6":
+  version "4.0.0-alpha.esm.6"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-4.0.0-alpha.esm.6.tgz#e4cd45c37ce0717230e169c5da2ed67d76409dfe"
+  integrity sha512-C6VabGXibG4vemHoLgOsNx4jgCx65qSmaOmb/hvQS802zTGhmnYmypZQAk7Zm4SiP4SOX5g9CA4Nozi8N+Zbig==
+  dependencies:
+    "@sanity/eventsource" "^3.0.2"
+    "@sanity/generate-help-url" "^3.0.0"
+    get-it "^6.0.1"
+    make-error "^1.3.0"
+    rxjs "^6.0.0"
+
 "@sanity/color@^2.1.20":
   version "2.1.20"
   resolved "https://registry.yarnpkg.com/@sanity/color/-/color-2.1.20.tgz#48c6ad3e6333d1da2989acbead1a46b4a8c5347a"
@@ -1452,7 +1463,7 @@
     eslint-plugin-react "^7.31.10"
     eslint-plugin-react-hooks "^4.6.0"
 
-"@sanity/eventsource@^3.0.1":
+"@sanity/eventsource@^3.0.1", "@sanity/eventsource@^3.0.2":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@sanity/eventsource/-/eventsource-3.0.3.tgz#e8d4b837daea1c29759ec3a6204b821b57257140"
   integrity sha512-7OXdCJOY4gQuOk5kpnbybVmnB1Cvwi2ISHE1WnGudsA3c92dCRoY+MZzFDp3wZKGEKxZEC8u91AkjXGwrddokQ==
@@ -3561,7 +3572,7 @@ get-it@^5.2.1:
     tunnel-agent "^0.6.0"
     url-parse "^1.1.9"
 
-get-it@^6.1.1:
+get-it@^6.0.1, get-it@^6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/get-it/-/get-it-6.1.1.tgz#793100756a800808abc8f0d981ca5c7b90fe343d"
   integrity sha512-2835L9lb4NAgjAbFOMMOm2XDSgj+lWmmCQv40A5rE7zZoIdM2+yk7Ie+sBD3T5lHW/Dw5IFFHyx16oQGpAo4hQ==
