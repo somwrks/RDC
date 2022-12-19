@@ -1,17 +1,12 @@
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import {
-  FcVoicePresentation,
-  FcInspection,
-  FcApproval,
-  FcDataProtection,
-} from "react-icons/fc";
+import { FcVoicePresentation, FcInspection,FcApproval,FcDataProtection } from "react-icons/fc";
 const LargeCard = () => {
   return (
     <div className="px-5 py-5">
       <h1 className="text-[#225dba] px-5 ">Raj Diagnostic Center</h1>
-      <div className="flex justify-between py-5">
+      <div className="flex justify-between py-5" >
         <div className="text-6xl font-semibold ">
           <p>
             For <span className="">private</span>
@@ -19,16 +14,18 @@ const LargeCard = () => {
           <p>clinics and </p>
           <p>medical centers </p>
           <div className="text-base mt-5 font-normal">
-            <p>A New and Efficient way of helping people</p>
+            <p>
+              A New and Efficient way of helping people 
+            </p>
             <p>and saving lives.</p>
           </div>
           <div className="bg-[#0e21fe] w-fit px-5 py-3 shadow-lg shadow-blue-700/60 text-base text-white font-normal rounded-full mt-5">
             <p className="flex items-center justify-center gap-3">
               Get in Touch
               <span className="bg-white/20 p-1 rounded-full">
-                <Link to="/contact">
-                  <AiOutlineArrowRight />
-                </Link>
+              <Link to="/contact">
+                <AiOutlineArrowRight />
+              </Link>
               </span>
             </p>
           </div>
@@ -36,8 +33,7 @@ const LargeCard = () => {
         <div className="relative">
           <div className=" bg-gradient-to-tr py-5 rounded-r-lg  from-blue-700 to-blue-300 rounded-tl-full ">
             <img
-              className="w-96 scale-125 object-contain"
-              alt="Hospital"
+              className="w-96 scale-125 object-contain" alt="Hospital"
               src="https://img.freepik.com/free-vector/health-professional-team_52683-36023.jpg?w=2000"
             />
           </div>
@@ -58,9 +54,7 @@ const LargeCard = () => {
           <div className="flex flex-col">
             <p className="text-white font-semibold">Online Booking</p>
             <p className="text-sm text-white/70">Book your appointment from </p>
-            <p className="text-sm text-white/70">
-              anywhere with just one click
-            </p>
+            <p className="text-sm text-white/70">anywhere with just one click</p>
           </div>
         </div>
         <div className="p-3 flex justify-center items-center">
@@ -75,13 +69,8 @@ const LargeCard = () => {
           <FcDataProtection className="h-20 w-20 bg-white rounded-2xl mr-2 brightness-110" />
           <div className="flex flex-col">
             <p className="text-white font-semibold">Trusted and Secure</p>
-            <p className="text-sm text-white/70">
-              Our team makes sure a Highly
-            </p>
-            <p className="text-sm text-white/70">
-              {" "}
-              Tested and Secured Environment
-            </p>
+            <p className="text-sm text-white/70">Our team makes sure a Highly</p>
+            <p className="text-sm text-white/70"> Tested and Secured Environment</p>
           </div>
         </div>
       </div>
