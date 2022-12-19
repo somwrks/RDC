@@ -2,9 +2,9 @@ import React from "react";
 
 const Hours = () => {
   return (
-    <div className="px-10 py-10">
-      <p className="text-3xl font-semibold pb-5">Our Hours of Operation</p>
+    <div className="px-10 py-10  mx-auto flex justify-center">
       <div className="space-y-10">
+        <p className="text-3xl  font-semibold pb-5">Our Hours of Operation</p>
         <div className="border-b flex justify-between">
           <p className="text-lg">
             {" "}
@@ -17,7 +17,7 @@ const Hours = () => {
           <p className="text-lg">
             {" "}
             <span className="bg-blue-700 text-xs px-2 mr-3 rounded-full"></span>
-            Monday
+            Tuesday
           </p>
           <p className="text-lg">08:00 AM - 17:00 PM</p>
         </div>
@@ -25,7 +25,7 @@ const Hours = () => {
           <p className="text-lg">
             {" "}
             <span className="bg-blue-700 text-xs px-2 mr-3 rounded-full"></span>
-            Monday
+            Wednesday
           </p>
           <p className="text-lg">08:00 AM - 17:00 PM</p>
         </div>
@@ -33,7 +33,7 @@ const Hours = () => {
           <p className="text-lg">
             {" "}
             <span className="bg-blue-700 text-xs px-2 mr-3 rounded-full"></span>
-            Monday
+            Thursday
           </p>
           <p className="text-lg">08:00 AM - 17:00 PM</p>
         </div>
@@ -41,7 +41,7 @@ const Hours = () => {
           <p className="text-lg">
             {" "}
             <span className="bg-blue-700 text-xs px-2 mr-3 rounded-full"></span>
-            Monday
+            Friday
           </p>
           <p className="text-lg">08:00 AM - 17:00 PM</p>
         </div>
@@ -49,7 +49,7 @@ const Hours = () => {
           <p className="text-lg">
             {" "}
             <span className="bg-blue-700 text-xs px-2 mr-3 rounded-full"></span>
-            Monday
+            Saturday
           </p>
           <p className="text-lg">08:00 AM - 17:00 PM</p>
         </div>

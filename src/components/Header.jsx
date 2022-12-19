@@ -14,15 +14,19 @@ const Header = () => {
       </div>
       {/* Right  */}
       <div className="flex gap-10">
-        <p className={active}>Home</p>
+          <p className={active}>Home</p>
         <p className={passive}>
           {" "}
-          <Link to="doctor">Doctor</Link>
+          <Link to="about">
+            <p>About Us</p>
+          </Link>
         </p>
         <p className={passive}>Services</p>
-        <div className="bg-[#0e21fe] shadow-lg shadow-blue-700/60 px-5 rounded-full text-white py-2">
-          <p>Book Now</p>
-        </div>
+        <Link to="/doctor">
+          <div className="bg-[#0e21fe] shadow-lg shadow-blue-700/60 px-5 rounded-full text-white py-2">
+            <p>Book Now</p>
+          </div>
+        </Link>
       </div>
     </div>
   );
