@@ -11,7 +11,7 @@ const sanityClient = client({
 const Booking = () => {
   const [paitentName, setPaitentName] = useState("");
   const [reason, setReason] = useState("");
-  console.log(process.env.REACT_SANITY_DATASET);
+  const [email, setEmail] = useState("");
 
   async function mutate(mutations) {
     const result = await fetch(
@@ -37,6 +37,7 @@ const Booking = () => {
         create: {
           _type: "appointment",
           paitent_name: paitentName,
+          email: email,
           reason: reason,
         },
       },
@@ -47,6 +48,7 @@ const Booking = () => {
     e.preventDefault();
     mutate(mutations);
     setPaitentName("");
+    setEmail("");
     setReason("");
   };
 
@@ -61,16 +63,12 @@ const Booking = () => {
         <div className="mt-5 gap-10 max-w-7xl mx-auto flex items-center border-b py-5 border-b-black/50">
           {/* fiuirst */}
           <form onSubmit={handleSubmit} className="">
-            <p
-              className="py-2 font-semibold"
-              value={paitentName}
-              onChange={(e) => setPaitentName(e.target.value)}
-            >
-              Name
-            </p>
+            <p className="py-2 font-semibold">Name</p>
 
             <input
               placeholder="Patient Name"
+              value={paitentName}
+              onChange={(e) => setPaitentName(e.target.value)}
               className="outline-none  border border-black/60 px-5 py-2"
             />
           </form>
@@ -78,19 +76,22 @@ const Booking = () => {
             <p className="py-2 font-semibold">Email</p>
             <input
               placeholder="Patient Email"
-              value={reason}
-              onChange={(e) => setReason(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="outline-none  border border-black/60 px-5 py-2"
             />
           </div>
-          <div className="bg-orange-500 px-5 py-1 text-white mt-8 ">
+          <div
+            onClick={!email ? null : handleSubmit}
+            className="bg-orange-500 px-5 py-1 text-white mt-8 "
+          >
             <p className="py-2 ">SUBMIT</p>
           </div>
         </div>
         <div className="flex justify-between py-5 ">
           <div>
             <div>
-              <p>Search</p>
+              <p>Concern</p>
             </div>
           </div>
         </div>

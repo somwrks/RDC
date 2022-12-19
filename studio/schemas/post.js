@@ -11,27 +11,26 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'email',
+      title: 'Email',
+      type: 'string',
+    }),
+    defineField({
       name: 'paitent_name',
       title: 'paitent name',
       type: 'string',
     }),
 
-    // defineField({
-    //   name: 'doctor',
-    //   title: 'Type of Doctor',
-    //   type: 'array',
-    //   of: [{type: 'reference', to: {type: 'category'}}],
-    // }),
-    // defineField({
-    //   name: 'date',
-    //   title: 'Date',
-    //   type: 'string',
-    // }),
-    // defineField({
-    //   name: 'body',
-    //   title: 'Body',
-    //   type: 'blockContent',
-    // }),
+    defineField({
+      name: 'doctor',
+      title: 'Type of Doctor',
+      type: 'string',
+    }),
+    defineField({
+      name: 'date',
+      title: 'Date',
+      type: 'string',
+    }),
   ],
   // mutations: [
   //   defineMutation({
