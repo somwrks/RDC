@@ -2,12 +2,11 @@ import React from "react";
 import Header from "./components/Header";
 import Booking from "./components/Booking";
 
-
 function Book() {
   return (
-    <div className="max-w-7xl  mx-auto">
-    <Header/>
-    <Booking/>
+    <div className="max-w-7xl h-screen  mx-auto">
+      <Header />
+      <Booking />
     </div>
   );
 }

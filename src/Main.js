@@ -7,12 +7,12 @@ import Address from "./components/Address";
 
 function Main() {
   return (
-    <div className="max-w-7xl  mx-auto">
+    <div className="max-w-7xl   mx-auto">
       <Header />
       <LargeCard />
-      <Tests/>
-      <Hours/>
-      <Address/>
+      <Tests />
+      <Hours />
+      <Address />
     </div>
   );
 }

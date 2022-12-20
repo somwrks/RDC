@@ -12,7 +12,7 @@ const Booking = () => {
   const [paitentName, setPaitentName] = useState("");
   const [reason, setReason] = useState("");
   const [speciality, setSpeciality] = useState("");
-  console.log(speciality)
+  console.log(speciality);
   const [email, setEmail] = useState("");
 
   async function mutate(mutations) {
@@ -53,18 +53,18 @@ const Booking = () => {
     setPaitentName("");
     setEmail("");
     setReason("");
-    setSpeciality("")
+    setSpeciality("");
   };
 
   return (
     <div className="flex justify-center mt-5 ">
-      <div>
-        <div>
+      <div className="border-b-black/30 border-b">
+        <div cla>
           <p className="text-4xl text-black/70">
             Search Doctor, Book Appointment
           </p>
         </div>
-        <div className="mt-5 gap-10 max-w-7xl mx-auto flex items-center border-b py-5 border-b-black/50">
+        <div className="mt-5 gap-10 max-w-7xl mx-auto flex items-center border-b py-5 ">
           {/* fiuirst */}
           <form onSubmit={handleSubmit} className="">
             <p className="py-2 font-semibold">Name</p>
@@ -92,26 +92,34 @@ const Booking = () => {
             <p className="py-2 ">SUBMIT</p>
           </div>
         </div>
-        <div className="flex justify-between py-5 ">
-          <div>
-            <div className="border border-black/20 rounded-lg p-5">
-            <p className="py-2 font-semibold">Speciality</p>
+        <div className="flex justify-center py-5  ">
+          <div className="border-b ">
+            <div className="border border-black/20 w-52 rounded-lg  p-5">
+              <p className="py-2 font-semibold">Speciality</p>
               <select
                 onChange={(e) => setSpeciality(e.target.value)}
                 value={speciality || ""}
                 className=" border border-black/30 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5"
               >
-                <option value="null">
+                <option
+                  className="py-2 border-b border-b-black/10"
+                  value="null"
+                >
                   None
                 </option>
-                <option value="cardio">
+                <option
+                  className="py-2 border-b border-b-black/10"
+                  value="cardio"
+                >
                   Cardio
                 </option>
-                <option value="drugs">
+                <option
+                  className="py-2 border-b border-b-black/10"
+                  value="drugs"
+                >
                   Drugs
                 </option>
               </select>
-              
             </div>
           </div>
         </div>
