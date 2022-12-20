@@ -17,6 +17,7 @@ function App() {
       progress.finish();
     }, 300);
     
+    
   };
   return (
     <>
