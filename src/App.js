@@ -18,6 +18,8 @@ function App() {
     }, 300);
   };
   return (
+    <>
+
     <div className="max-w-7xl  mx-auto">
     <BrowserRouter>
       <Header load={loadcontent}/>
@@ -28,8 +30,9 @@ function App() {
         <Route path="/book" element={<Booking />} />
       </Routes>
     </BrowserRouter>
-      <Footer/>
 </div>
+      <Footer/>
+    </>
   );
 }
 
