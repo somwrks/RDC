@@ -2,8 +2,9 @@ import React from "react";
 
 const Faculty = () => {
   return (
+    <div className="px-5 py-5">
     <div className="px-5 py-5 flex flex-wrap flex-col container">
-      <h1 className="text-6xl font-bold text-blue-700">Meet Our Faculty</h1>
+      <h1 className="text-6xl font-bold ">Meet Our Faculty</h1>
       <div className="container p-3 mt-5 bg-gradient-to-b from-green-400 to-blue-400 rounded-t-3xl flex flex-wrap flex-row">
 
       <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
@@ -36,6 +37,7 @@ const Faculty = () => {
         </div>
       </div>
       </div>
+    </div>
     </div>
   );
 };

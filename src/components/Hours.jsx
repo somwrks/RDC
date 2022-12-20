@@ -66,7 +66,7 @@ import {FcCancel, FcOk} from "react-icons/fc";
 const Hours = () => {
   return (
     <div className="px-5 py-5 flex flex-wrap flex-col container">
-        <h1 className="text-6xl font-bold text-blue-700">Office Hours</h1>
+        <h1 className="text-6xl font-bold ">Office Hours</h1>
         <div className=" mt-5 flex flex-wrap flex-row container bg-gradient-to-t from-green-200 to-blue-800 rounded-t-3xl">
 
         <div className="  container max-w-3xl p-2 text-blue-100 font-light font-serif ">
@@ -105,18 +105,24 @@ const Hours = () => {
           <h2>From 8:30 am </h2>
           <h2>to 6 pm </h2>
           <h5 className="mt-1 text-xl font-normal"> Indian Standard Time</h5>
-          <div className="text-3xl mt-5 font-normal">
+          <div className="text-xl mt-5 font-normal">
+            <p>
+           <font className="font-bold"> Ultrasound : </font>10:30am to 4:00pm
+            </p>
+            <p>
+           <font className="font-bold"> Other Examinations : </font>8:30am to 6:00pm
+            </p>
+          </div>
+          <div className="text-xl mt-5 font-normal">
             <p>
               Hospital and Staff are available
             </p>
             <p>during this period</p>
           </div>
-          <p  className="text-3xl mt-5 font-normal">
+          <p  className="text-xl mt-5 font-normal">
             Doctor's Stay might 
-            <p>
             differ at times.
             </p>
-          </p>
         </div>
         </div>
     </div>
