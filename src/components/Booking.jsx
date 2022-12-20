@@ -11,6 +11,8 @@ const sanityClient = client({
 const Booking = () => {
   const [paitentName, setPaitentName] = useState("");
   const [reason, setReason] = useState("");
+  const [speciality, setSpeciality] = useState("");
+  console.log(speciality)
   const [email, setEmail] = useState("");
 
   async function mutate(mutations) {
@@ -39,6 +41,7 @@ const Booking = () => {
           paitent_name: paitentName,
           email: email,
           reason: reason,
+          speciality: speciality,
         },
       },
     ],
@@ -50,6 +53,7 @@ const Booking = () => {
     setPaitentName("");
     setEmail("");
     setReason("");
+    setSpeciality("")
   };
 
   return (
@@ -90,8 +94,24 @@ const Booking = () => {
         </div>
         <div className="flex justify-between py-5 ">
           <div>
-            <div>
-              <p>Concern</p>
+            <div className="border border-black/20 rounded-lg p-5">
+            <p className="py-2 font-semibold">Speciality</p>
+              <select
+                onChange={(e) => setSpeciality(e.target.value)}
+                value={speciality || ""}
+                className=" border border-black/30 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5"
+              >
+                <option value="null">
+                  None
+                </option>
+                <option value="cardio">
+                  Cardio
+                </option>
+                <option value="drugs">
+                  Drugs
+                </option>
+              </select>
+              
             </div>
           </div>
         </div>

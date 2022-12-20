@@ -5,9 +5,14 @@ export default defineType({
   title: 'Appointment',
   type: 'document',
   fields: [
+    // defineField({
+    //   name: 'reason',
+    //   title: 'Reason',
+    //   type: 'string',
+    // }),
     defineField({
-      name: 'reason',
-      title: 'Reason',
+      name: 'paitent_name',
+      title: 'paitent name',
       type: 'string',
     }),
     defineField({
@@ -15,15 +20,10 @@ export default defineType({
       title: 'Email',
       type: 'string',
     }),
+    
     defineField({
-      name: 'paitent_name',
-      title: 'paitent name',
-      type: 'string',
-    }),
-
-    defineField({
-      name: 'doctor',
-      title: 'Type of Doctor',
+      name: 'speciality',
+      title: 'Which doctor needed',
       type: 'string',
     }),
     defineField({
