@@ -2,7 +2,8 @@ import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { FcVoicePresentation, FcInspection,FcApproval,FcDataProtection } from "react-icons/fc";
-const LargeCard = () => {
+const LargeCard = (props) => {
+  const loadcontent = props.load;
   return (
     <div className="px-5 py-5">
       <h1 className="text-[#225dba] px-5 ">Raj Diagnostic Center</h1>
@@ -23,7 +24,7 @@ const LargeCard = () => {
             <p className="flex items-center justify-center gap-3">
               Get in Touch
               <span className="bg-white/20 p-1 rounded-full">
-              <Link to="/contact">
+              <Link onClick={loadcontent} to="/contact">
                 <AiOutlineArrowRight />
               </Link>
               </span>

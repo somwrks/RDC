@@ -1,16 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+*{
+  transition: 0.3s ease-in-out;
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
-  transition: 0.3s ease-in-out;
+  background: linear-gradient(rgb(219, 234, 254), rgb(147, 197, 253), rgb(59, 130, 246));
+  background-repeat: no-repeat;
+  background-size: cover;
   &:before{
     content: "";
-    background-image: url("https://www.inkdrop.app/static/masthead-bg-f4b0f2b95bae8748ba397d4d5a72a08d.jpg");
     position: fixed;
     left: 0;
     top: 0;

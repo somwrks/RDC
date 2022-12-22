@@ -3,7 +3,7 @@ import React from "react";
 export default function Address() {
   return (
     <div className="px-5 py-5 flex flex-wrap flex-col container">
-      <h1 className="text-6xl font-bold text-blue-700">Address</h1>
+      <h1 className="text-6xl font-bold ">Address</h1>
       <div
         id="test-container"
         className="container mt-5 p-3 bg-gradient-to-b from-green-400 to-blue-400 rounded-t-3xl"

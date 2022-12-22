@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const Header = () => {
+
+function Header(props) {
+  const loadcontent = props.load;
   const active =
     "text-black font-medium text-black border-b-2 border-b-[#073fe5] text-uppercase";
   const passive = "text-black";
@@ -9,21 +11,21 @@ const Header = () => {
       {/* Logo */}
       <div>
         <p className="text-sky-900 font-bold ">
-          <Link to="/">RDC - Hospital</Link>
+          <Link to="/" onClick={loadcontent}>RDC - Hospital</Link>
         </p>
       </div>
       {/* Right  */}
       <div className="flex gap-10">
         <p id="home" className={active}>
-      <Link to="/" >Home</Link>  
+      <Link to="/" onClick={loadcontent} >Home</Link>  
         </p>
         <p id="about" className={passive}>
-          <Link to="/about">About</Link>
+          <Link to="/about" onClick={loadcontent}>About</Link>
         </p>
         <p id="contact" className={passive}>
-       <Link to="/contact">Contact Us</Link> </p>
+       <Link to="/contact" onClick={loadcontent}>Contact Us</Link> </p>
         <div className="bg-[#0e21fe] shadow-lg shadow-blue-700/60 px-5 rounded-full text-white py-2">
-          <p id="book"><Link to="/book">Book Now</Link> </p>
+          <p id="book"><Link onClick={loadcontent} to="/book">Book Now</Link> </p>
         </div>
       </div>
     </div>

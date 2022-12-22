@@ -1,19 +1,18 @@
 import React from "react";
-import Header from "./components/Header";
 import Hours from "./components/Hours";
 import Tests from "./components/Tests";
 import LargeCard from "./components/LargeCard";
 import Address from "./components/Address";
 
-function Main() {
+function Main(props) {
   return (
-    <div className="max-w-7xl   mx-auto">
-      <Header />
-      <LargeCard />
-      <Tests />
-      <Hours />
-      <Address />
-    </div>
+    <>
+
+      <LargeCard load={props.load}/>
+      <Tests load={props.load}/>
+      <Hours/>
+      <Address/>
+    </>
   );
 }
 
