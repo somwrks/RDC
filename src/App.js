@@ -55,11 +55,6 @@ function App() {
         home.classList.add("passive")
 
       }
-      else{
-        home.classList.add("active")
-        about.classList.add("passive")
-        contact.classList.add("passive")
-      }
     }, 1);
     setTimeout(() => {
       progress.finish();

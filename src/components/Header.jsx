@@ -14,7 +14,7 @@ function Header(props) {
       </div>
       {/* Right  */}
       <div className="flex gap-10">
-        <p id="home" >
+        <p id="home" className="active">
       <Link to="/" onClick={loadcontent} >Home</Link>  
         </p>
         <p id="about" >

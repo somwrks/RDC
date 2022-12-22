@@ -10,10 +10,10 @@ const LargeCard = (props) => {
       <div className="flex justify-between py-5" >
         <div className="text-6xl font-semibold ">
           <p>
-            For <span className="">private</span>
+            WE <span className="font-bold">CARE</span>
           </p>
-          <p>clinics and </p>
-          <p>medical centers </p>
+          <p>ABOUT YOUR</p>
+          <p><span className="font-bold">HEALTH</span> & <span className="font-bold">WELLNESS</span></p>
           <div className="text-base mt-5 font-normal">
             <p>
               A New and Efficient way of helping people 
