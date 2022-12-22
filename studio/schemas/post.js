@@ -20,6 +20,16 @@ export default defineType({
       title: 'Email',
       type: 'string',
     }),
+    defineField({
+      name: 'phone',
+      title: 'Phone',
+      type: 'string',
+    }),
+    defineField({
+      name: 'address',
+      title: 'Address',
+      type: 'string',
+    }),
     
     defineField({
       name: 'speciality',
