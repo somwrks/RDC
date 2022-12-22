@@ -23,7 +23,22 @@ body {
     background-size: cover;
   }
 }
+
+
 #test-container{
   align-items: center;
   justify-content: center;
+}
+.bar-of-progress{
+  position: absolute;
+}
+.active{
+  color: #5c83ff;
+  border-bottom:solid darkblue 2px;
+  font-weight: 500;
+}
+.passive{
+  border: 0;
+  color: black;
+  font-weight: normal;
 }
