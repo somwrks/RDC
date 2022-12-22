@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 
 function Header(props) {
   const loadcontent = props.load;
-  const active =
-    "text-black font-medium text-black border-b-2 border-b-[#073fe5] text-uppercase";
-  const passive = "text-black";
+  
   return (
     <div className="flex justify-between p-10">
       {/* Logo */}
@@ -16,13 +14,13 @@ function Header(props) {
       </div>
       {/* Right  */}
       <div className="flex gap-10">
-        <p id="home" className={active}>
+        <p id="home" >
       <Link to="/" onClick={loadcontent} >Home</Link>  
         </p>
-        <p id="about" className={passive}>
+        <p id="about" >
           <Link to="/about" onClick={loadcontent}>About</Link>
         </p>
-        <p id="contact" className={passive}>
+        <p id="contact" >
        <Link to="/contact" onClick={loadcontent}>Contact Us</Link> </p>
         <div className="bg-[#0e21fe] shadow-lg shadow-blue-700/60 px-5 rounded-full text-white py-2">
           <p id="book"><Link onClick={loadcontent} to="/book">Book Now</Link> </p>
