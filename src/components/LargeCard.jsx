@@ -10,9 +10,9 @@ const LargeCard = (props) => {
       <div className="flex justify-between py-5" >
         <div className="text-6xl font-semibold ">
           <p>
-            WE <span className="font-bold">CARE</span>
+            We <span className="font-bold">CARE</span>
           </p>
-          <p>ABOUT YOUR</p>
+          <p>About Your</p>
           <p><span className="font-bold">HEALTH</span> & <span className="font-bold">WELLNESS</span></p>
           <div className="text-base mt-5 font-normal">
             <p>

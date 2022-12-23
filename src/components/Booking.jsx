@@ -14,6 +14,9 @@ const Booking = () => {
   const [speciality, setSpeciality] = useState("");
   console.log(speciality);
   const [email, setEmail] = useState("");
+  const [gender, setGender] = useState("");
+  const [address, setAddress] = useState("");
+  const [phone, setPhone] = useState("");
 
   async function mutate(mutations) {
     const result = await fetch(
@@ -42,6 +45,9 @@ const Booking = () => {
           email: email,
           reason: reason,
           speciality: speciality,
+          phone: phone,
+          gender: gender,
+          address: address,
         },
       },
     ],
@@ -59,9 +65,9 @@ const Booking = () => {
   return (
     <div className="flex justify-center mt-5 ">
       <div className="border-b-black/30 border-b">
-        <div cla>
-          <p className="text-4xl text-black/70">
-            Search Doctor, Book Appointment
+        <div className="flex justify-center">
+          <p className="text-4xl text-black/70 ">
+             Book Appointment
           </p>
         </div>
         <div className="mt-5 gap-10 max-w-7xl mx-auto flex items-center border-b py-5 ">
@@ -73,7 +79,7 @@ const Booking = () => {
               placeholder="Patient Name"
               value={paitentName}
               onChange={(e) => setPaitentName(e.target.value)}
-              className="outline-none  border border-black/60 px-5 py-2"
+              className="outline-none rounded-lg  border border-black/60 px-5 py-2"
             />
           </form>
           <div className="">
@@ -82,20 +88,30 @@ const Booking = () => {
               placeholder="Patient Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="outline-none  border border-black/60 px-5 py-2"
+              className="outline-none rounded-lg border border-black/60 px-5 py-2"
             />
           </div>
           <div
             onClick={!email ? null : handleSubmit}
-            className="bg-orange-500 px-5 py-1 text-white mt-8 "
+            className="bg-orange-500 px-3 rounded-lg py-1 text-white mt-8 "
           >
-            <p className="py-2 ">SUBMIT</p>
+            <p className="py-2 rounded-lg ">SUBMIT</p>
           </div>
         </div>
-        <div className="flex justify-center py-5  ">
-          <div className="border-b ">
-            <div className="border border-black/20 w-52 rounded-lg  p-5">
-              <p className="py-2 font-semibold">Speciality</p>
+        <div className="flex justify-between py-5  ">
+          <div className=" flex gap-10 ">
+          <div className="flex flex-col">
+            <p className="py-2 font-semibold">Phone</p>
+            <input
+              placeholder="+91578385"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className="outline-none rounded-lg border border-black/60 px-5 py-2"
+            />
+          </div>
+            
+            <div className="border flex flex-col border-black/20 w-52 rounded-lg  px-4 py-2 ">
+              <p className="py-2 font-semibold">Type of Test</p>
               <select
                 onChange={(e) => setSpeciality(e.target.value)}
                 value={speciality || ""}
@@ -121,6 +137,31 @@ const Booking = () => {
                 </option>
               </select>
             </div>
+            <div className="p-2 border rounded-lg">
+              <p>Gender</p>
+              <select className="border border-black/30 p-3 rounded-lg" onChange={(e) => setGender(e.target.value)} value={gender || ""} >
+                <option value="null">Null</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center py-5   ">
+          <div className=" flex gap-10 ">
+          <div className="flex flex-col">
+            <p className="py-2 font-semibold">Address</p>
+            <textarea
+              placeholder="X6902 Y house, Z street"
+              value={address}
+              cols={60}
+              rows={5}
+              onChange={(e) => setAddress(e.target.value)}
+              className="outline-none rounded-lg w-full border border-black/60 px-5 py-2"
+            />
+          </div>
+            
+           
           </div>
         </div>
       </div>
