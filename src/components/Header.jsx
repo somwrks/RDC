@@ -18,7 +18,7 @@ function Header(props) {
       <Link to="/" onClick={loadcontent} >Home</Link>  
         </p>
         <p id="about" >
-          <Link to="/about" onClick={loadcontent}>About</Link>
+          <Link to="/about" onClick={loadcontent}>Services</Link>
         </p>
         <p id="contact" >
        <Link to="/contact" onClick={loadcontent}>Contact Us</Link> </p>

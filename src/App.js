@@ -11,23 +11,12 @@ import ProgressBar from "@badrap/bar-of-progress";
 
 function App() {
   const loadcontent=()=>{
-    const progress = new ProgressBar();
-    progress.start();
     setTimeout(() => {
       let location = window.location.pathname;
       let home = document.getElementById("home")
       let contact = document.getElementById("contact")
       let about = document.getElementById("about")
-      if(location==="/")
-      {
-        home.classList.remove("passive")
-
-        about.classList.add("passive")
-        contact.classList.add("passive")
-
-        home.classList.add("active");
-      }
-      else if(location==="/about")
+      if(location==="/about")
       {
         about.classList.remove("passive")
 
@@ -55,7 +44,17 @@ function App() {
         home.classList.add("passive")
 
       }
-    }, 1);
+      else{
+        home.classList.remove("passive")
+
+        about.classList.add("passive")
+        contact.classList.add("passive")
+
+        home.classList.add("active");
+      }
+    }, 0);
+    const progress = new ProgressBar();
+    progress.start();
     setTimeout(() => {
       progress.finish();
     }, 300);
