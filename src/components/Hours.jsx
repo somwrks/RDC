@@ -1,65 +1,3 @@
-// import React from "react";
-
-// const Hours = () => {
-//   return (
-//     <div className="px-10 py-10  mx-auto flex justify-center">
-//       <div className="space-y-10">
-//         <p className="text-3xl  font-semibold pb-5">Our Hours of Operation</p>
-//         <div className="border-b flex justify-between">
-//           <p className="text-lg">
-//             {" "}
-//             <span className="bg-blue-700 text-xs px-2 mr-3 rounded-full"></span>
-//             Monday
-//           </p>
-//           <p className="text-lg">08:00 AM - 17:00 PM</p>
-//         </div>
-//         <div className="border-b flex justify-between">
-//           <p className="text-lg">
-//             {" "}
-//             <span className="bg-blue-700 text-xs px-2 mr-3 rounded-full"></span>
-//             Tuesday
-//           </p>
-//           <p className="text-lg">08:00 AM - 17:00 PM</p>
-//         </div>
-//         <div className="border-b flex justify-between">
-//           <p className="text-lg">
-//             {" "}
-//             <span className="bg-blue-700 text-xs px-2 mr-3 rounded-full"></span>
-//             Wednesday
-//           </p>
-//           <p className="text-lg">08:00 AM - 17:00 PM</p>
-//         </div>
-//         <div className="border-b flex justify-between">
-//           <p className="text-lg">
-//             {" "}
-//             <span className="bg-blue-700 text-xs px-2 mr-3 rounded-full"></span>
-//             Thursday
-//           </p>
-//           <p className="text-lg">08:00 AM - 17:00 PM</p>
-//         </div>
-//         <div className="border-b flex justify-between">
-//           <p className="text-lg">
-//             {" "}
-//             <span className="bg-blue-700 text-xs px-2 mr-3 rounded-full"></span>
-//             Friday
-//           </p>
-//           <p className="text-lg">08:00 AM - 17:00 PM</p>
-//         </div>
-//         <div className="border-b flex justify-between">
-//           <p className="text-lg">
-//             {" "}
-//             <span className="bg-blue-700 text-xs px-2 mr-3 rounded-full"></span>
-//             Saturday
-//           </p>
-//           <p className="text-lg">08:00 AM - 17:00 PM</p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Hours;
-
 import React from "react";
 import { FcCancel, FcOk } from "react-icons/fc";
 
@@ -77,7 +15,7 @@ const Hours = () => {
     <div className="px-5 py-5 flex flex-wrap flex-col container">
       <h1 className="text-6xl font-bold ">Office Hours</h1>
       <div className=" mt-5 flex flex-wrap flex-row container bg-gradient-to-t from-green-200 to-blue-800 rounded-t-3xl">
-        <div className="  container max-w-3xl p-2 text-blue-100 font-light font-serif ">
+        <div className="container max-w-3xl p-2 text-blue-100 font-light font-serif ">
           {Days.map((i, value) => {
             return (
               <div

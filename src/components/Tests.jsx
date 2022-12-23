@@ -9,7 +9,7 @@ export default function Tests(props) {
         id="test-container"
         className="container mt-5 p-3  rounded-t-3xl flex flex-wrap flex-row"
       >
-        <div className="max-w-sm m-2 bg-white hover:scale-105 rounded-lg shadow-md  bg-gradient-to-br from-blue-500 to-green-200">
+        <div className="max-w-sm m-2 bg-white hover:scale-105 rounded-lg shadow-md  bg-gradient-to-br from-green-100 to-blue-900">
           <Link onClick={loadcontent} to="/book">
             <img
               className="rounded-t-lg"
@@ -21,14 +21,10 @@ export default function Tests(props) {
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               Radiology
             </h5>
-            <p className=" font-normal text-black-700 ">
-              Ultrasound, Digital X-Ray
-            </p>
-            <br />
           </div>
         </div>
         <div
-          className="max-w-sm m-2 bg-white hover:scale-105  rounded-lg shadow-md  bg-gradient-to-br from-blue-500 to-green-200"
+          className="max-w-sm m-2 bg-white hover:scale-105  rounded-lg shadow-md  bg-gradient-to-br from-green-100 to-blue-900"
         >
           <Link onClick={loadcontent} to="/book">
             <img
@@ -41,13 +37,9 @@ export default function Tests(props) {
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               Pathology
             </h5>
-            <p className="font-normal text-black-700 ">
-              All types of blood test routine & special, 
-              Stool & Urine examination
-            </p>
           </div>
         </div>
-        <div className="max-w-sm m-2 bg-white hover:scale-105  rounded-lg shadow-md  bg-gradient-to-br from-blue-500 to-green-200">
+        <div className="max-w-sm m-2 bg-white hover:scale-105  rounded-lg shadow-md  bg-gradient-to-br from-green-100 to-blue-900">
           <Link onClick={loadcontent} to="/book">
             <img
               className="rounded-t-lg"
@@ -59,11 +51,6 @@ export default function Tests(props) {
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               Electrocardiogram
             </h5>
-            <p className=" font-normal text-black-700 ">
-
-              Full Body Electrocardiogram available
-            </p>
-            <br />
           </div>
         </div>
       </div>
