@@ -43,7 +43,6 @@ const Booking = () => {
           _type: "appointment",
           paitent_name: paitentName,
           email: email,
-          reason: reason,
           speciality: speciality,
           phone: phone,
           gender: gender,
@@ -60,6 +59,9 @@ const Booking = () => {
     setEmail("");
     setReason("");
     setSpeciality("");
+    setGender("")
+    setPhone("")
+    setAddress("")
   };
 
   return (

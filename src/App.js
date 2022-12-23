@@ -10,41 +10,38 @@ import ProgressBar from "@badrap/bar-of-progress";
 
 
 function App() {
-  const loadcontent=()=>{
+  const loadcontent = () => {
     setTimeout(() => {
       let location = window.location.pathname;
       let home = document.getElementById("home")
       let contact = document.getElementById("contact")
       let about = document.getElementById("about")
-      if(location==="/about")
-      {
+      if (location === "/about") {
         about.classList.remove("passive")
 
         home.classList.add("passive")
         contact.classList.add("passive")
-        
-        
+
+
         about.classList.add("active");
-        
+
       }
-      else if(location==="/contact")
-      {
+      else if (location === "/contact") {
         contact.classList.remove("passive")
 
         home.classList.add("passive")
         about.classList.add("passive")
-        
-        
+
+
         contact.classList.add("active");
       }
-      else if(location==="/book")
-      {
+      else if (location === "/book") {
         contact.classList.add("passive")
         about.classList.add("passive")
         home.classList.add("passive")
 
       }
-      else{
+      else {
         home.classList.remove("passive")
 
         about.classList.add("passive")
@@ -62,19 +59,19 @@ function App() {
   return (
     <>
 
-    <div className="max-w-7xl  mx-auto">
-    
-    <BrowserRouter>
-      <Header load={loadcontent} />
-      <Routes>
-        <Route path="/" element={<Main load={loadcontent}/>} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact/>} />
-        <Route path="/book" element={<Booking />} />
-      </Routes>
-    </BrowserRouter>
-</div>
-      <Footer/>
+      <div className="max-w-7xl  mx-auto ">
+
+        <BrowserRouter>
+          <Header load={loadcontent} />
+          <Routes>
+            <Route path="/" element={<Main load={loadcontent} />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/book" element={<Booking />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+      <Footer />
     </>
   );
 }
