@@ -9,7 +9,7 @@ export default function Tests(props) {
         id="test-container"
         className="container mt-5 p-3  rounded-t-3xl flex flex-wrap flex-row"
       >
-        <div className="max-w-sm m-2 bg-white hover:scale-105 rounded-lg shadow-md  bg-gradient-to-br from-green-100 to-blue-900">
+        <div className="max-w-sm m-2 bg-white hover:scale-105 rounded-lg shadow-md  bg-gradient-to-br from-blue-700 via-[#3052f8]  to-blue-400">
           <Link onClick={loadcontent} to="/book">
             <img
               className="rounded-t-lg"
@@ -24,7 +24,7 @@ export default function Tests(props) {
           </div>
         </div>
         <div
-          className="max-w-sm m-2 bg-white hover:scale-105  rounded-lg shadow-md  bg-gradient-to-br from-green-100 to-blue-900"
+          className="max-w-sm m-2 bg-white hover:scale-105  rounded-lg shadow-md  bg-gradient-to-br from-blue-700 via-[#3052f8]  to-blue-400"
         >
           <Link onClick={loadcontent} to="/book">
             <img
@@ -39,7 +39,7 @@ export default function Tests(props) {
             </h5>
           </div>
         </div>
-        <div className="max-w-sm m-2 bg-white hover:scale-105  rounded-lg shadow-md  bg-gradient-to-br from-green-100 to-blue-900">
+        <div className="max-w-sm m-2 bg-white hover:scale-105  rounded-lg shadow-md bg-gradient-to-br from-blue-700 via-[#3052f8]  to-blue-400">
           <Link onClick={loadcontent} to="/book">
             <img
               className="rounded-t-lg"
