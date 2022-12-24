@@ -17,7 +17,7 @@ const Booking = () => {
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
 
-  const authToken = "3db314e47bb424afc59f3851480bed36";
+  const authToken = "daca14549295d0a3733f7bea26c68bdc";
   const accountSid = "ACf89d66aeb242596d292d4a232c564b40";
   const from = "+17255278202";
   const sendSms = (to, body) => {
@@ -81,7 +81,7 @@ const Booking = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     sendSms(phone, "Hello from react!");
-    mutate(mutations);
+    // mutate(mutations);
     setPaitentName("");
     setEmail("");
     setReason("");
