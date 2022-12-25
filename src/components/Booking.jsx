@@ -11,38 +11,18 @@ const Booking = () => {
   const [paitentName, setPaitentName] = useState("");
   const [reason, setReason] = useState("");
   const [speciality, setSpeciality] = useState("");
-  console.log(speciality);
   const [email, setEmail] = useState("");
   const [gender, setGender] = useState("");
   const [address, setAddress] = useState("");
-  const [phone, setPhone] = useState("");
-
-  const authToken = "daca14549295d0a3733f7bea26c68bdc";
-  const accountSid = "ACf89d66aeb242596d292d4a232c564b40";
-  const from = "+17255278202";
-  const sendSms = (to, body) => {
-    axios
-      .post(
-        `https://api.twilio.com/2010-04-01/Accounts/ACf89d66aeb242596d292d4a232c564b40/Messages.json`,
-        {
-          From: from,
-          To: to,
-          Body: body,
-        },
-        {
-          auth: {
-            username: accountSid,
-            password: authToken,
-          },
-        }
-      )
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
+  const [to, setTo] = useState("");
+  console.log(to);
+  const body =
+    "SaarDOO coustumer serivce, Sorry for the inconvenience we are testing our sms service so yeah lol";
+  function sendSms() {
+    fetch(
+      `http://localhost:4000/send-text?recipient=${to}&textmessage=${body}`
+    ).catch((err) => console.error(err));
+  }
 
   async function mutate(mutations) {
     const result = await fetch(
@@ -70,7 +50,7 @@ const Booking = () => {
           paitent_name: paitentName,
           email: email,
           speciality: speciality,
-          phone: phone,
+          phone: to,
           gender: gender,
           address: address,
         },
@@ -80,14 +60,14 @@ const Booking = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    sendSms(phone, "Hello from react!");
+    sendSms();
     // mutate(mutations);
     setPaitentName("");
     setEmail("");
     setReason("");
     setSpeciality("");
     setGender("");
-    setPhone("");
+    setTo("");
     setAddress("");
   };
 
@@ -131,8 +111,8 @@ const Booking = () => {
               <p className="py-2 font-semibold">Phone</p>
               <input
                 placeholder="+91578385"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                value={to}
+                onChange={(e) => setTo(e.target.value)}
                 className="outline-none rounded-lg border border-black/60 px-5 py-2"
               />
             </div>
@@ -150,62 +130,51 @@ const Booking = () => {
                 >
                   None
                 </option>
-                <option
-                  className="py-2 border-b border-b-black/10"
-                  value="cardio"
-                >
-                  Ultrasound
-                </option>
-                <option
-                  className="py-2 border-b border-b-black/10"
-                  value="drugs"
-                >
-                  Digital Xray
-                </option>
-                <option
-                  className="py-2 border-b border-b-black/10"
-                  value="drugs"
-                >
-                  Blood test
-                </option>
-                <option
-                  className="py-2 border-b border-b-black/10"
-                  value="drugs"
-                >
-                  Stool
-                </option>
-                <option
-                  className="py-2 border-b border-b-black/10"
-                  value="drugs"
-                >
-                  Urine Examination
-                </option>
-                <option
-                  className="py-2 border-b border-b-black/10"
-                  value="drugs"
-                >
-                  Biopsy
-                </option>
-                <option
-                  className="py-2 border-b border-b-black/10"
-                  value="drugs"
-                >
-                  Cultre & Sensitivity
-                </option>
-                <option
-                  className="py-2 border-b border-b-black/10"
-                  value="drugs"
-                >
-                  Hormone Analysis
-                </option>
-                <option
-                  className="py-2 border-b border-b-black/10"
-                  value="drugs"
-                >
-                  Electrocardiogram
-                </option>
+                <optgroup label="Radiology">
+                  <option
+                    className="py-2 border-b border-b-black/10"
+                    value="radiology-ultrasound"
+                  >
+                    Ultrasound
+                  </option>
+                  <option
+                    className="py-2 border-b border-b-black/10"
+                    value="radiology-digital-xray"
+                  >
+                    Digital Xray
+                  </option>
+                </optgroup>
+                <optgroup label="Pathology">
+                  <option
+                    className="py-2 border-b border-b-black/10"
+                    value="pathology-blood-test"
+                  >
+                    Blood Test
+                  </option>
+                  <option
+                    className="py-2 border-b border-b-black/10"
+                    value="pathology-stool"
+                  >
+                    Stool
+                  </option>
+                </optgroup>
+                <optgroup label="Other">
+                  <option
+                    className="py-2 border-b border-b-black/10"
+                    value="other-urine-examination"
+                  >
+                    Urine Examination
+                  </option>
+                  <option
+                    className="py-2 border-b border-b-black/10"
+                    value="other-urine-examination"
+                  >
+                    Urine Examination
+                  </option>
+                </optgroup>
               </select>
             </div>
+
             <div className="p-2 border rounded-lg">
               <p>Gender</p>
               <select
