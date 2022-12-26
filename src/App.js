@@ -10,7 +10,57 @@ import ProgressBar from "@badrap/bar-of-progress";
 
 
 function App() {
+const progress = new ProgressBar();
+progress.start();
+setTimeout(() => {
+  progress.finish();
+}, 300);
+  setTimeout(() => {
+    let location = window.location.pathname;
+    let home = document.getElementById("home")
+    let contact = document.getElementById("contact")
+    let about = document.getElementById("about")
+    if(location==="/about")
+    {
+      about.classList.remove("passive")
+
+      home.classList.add("passive")
+      contact.classList.add("passive")
+      
+      
+      about.classList.add("active");
+      
+    }
+    else if(location==="/contact")
+    {
+      contact.classList.remove("passive")
+
+      home.classList.add("passive")
+      about.classList.add("passive")
+      
+      
+      contact.classList.add("active");
+    }
+    else if(location==="/book")
+    {
+      contact.classList.add("passive")
+      about.classList.add("passive")
+      home.classList.add("passive")
+
+    }
+    else{
+      home.classList.remove("passive")
+      about.classList.add("passive")
+      contact.classList.add("passive")
+      
+      home.classList.add("active");
+    }
+  }, 1);
   const loadcontent=()=>{
+    progress.start();
+setTimeout(() => {
+  progress.finish();
+}, 300);
     setTimeout(() => {
       let location = window.location.pathname;
       let home = document.getElementById("home")
@@ -19,7 +69,7 @@ function App() {
       if(location==="/about")
       {
         about.classList.remove("passive")
-
+  
         home.classList.add("passive")
         contact.classList.add("passive")
         
@@ -30,7 +80,7 @@ function App() {
       else if(location==="/contact")
       {
         contact.classList.remove("passive")
-
+  
         home.classList.add("passive")
         about.classList.add("passive")
         
@@ -42,23 +92,20 @@ function App() {
         contact.classList.add("passive")
         about.classList.add("passive")
         home.classList.add("passive")
-
+  
       }
       else{
         home.classList.remove("passive")
-
         about.classList.add("passive")
         contact.classList.add("passive")
-
+  
         home.classList.add("active");
       }
-    }, 0);
-    const progress = new ProgressBar();
-    progress.start();
-    setTimeout(() => {
-      progress.finish();
-    }, 300);
+    }, 1);
   };
+
+
+
   return (
     <>
 
@@ -66,7 +113,7 @@ function App() {
     
     <BrowserRouter>
       <Header load={loadcontent} />
-      <Routes>
+      <Routes >
         <Route path="/" element={<Main load={loadcontent}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact/>} />
