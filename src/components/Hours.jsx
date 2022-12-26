@@ -22,7 +22,7 @@ const Hours = () => {
                 className={`justify-between border rounded-2xl mt-3 p-1 flex bg-gradient-to-b ${
                   Days[value] === "Sunday"
                     ? "from-blue-100 to-red-400"
-                    : "from-green-400 to-blue-400"
+                    : "from-blue-900 to-green-200"
                 } flex-row`}
               >
                 <h1 className="text-2xl ">{Days[value]}</h1>
@@ -36,7 +36,7 @@ const Hours = () => {
           })}
         </div>
 
-        <div className="flex mt-5  p-3 text-blue-100 bg-gradient-to-t from-green-200 to-blue-800 rounded-t-3xl font-light font-serif ">
+        <div className="flex mt-5  p-3 text-blue-100 bg-gradient-to-t from-green-100 to-blue-900 rounded-t-3xl font-light font-serif ">
           <div className="text-5xl font-semibold ">
             <h2>From 8:30 am </h2>
             <h2>to 6 pm </h2>
