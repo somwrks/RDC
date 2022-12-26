@@ -1,19 +1,28 @@
 import React, { useState } from "react";
 import client from "@sanity/client";
-
+import axios from "axios";
 const sanityClient = client({
   projectId: "0idhl247",
   dataset: "production",
   token:
     "skzx0CQViU2qRjOG3COuau1pEl9cphvOhjRnM7JGHblYGgVZfn7uprLiaRrtqnYE9krLkXo7WK7XIICkCt0dSIlurQRp20wUFKLWef93XcpD44qIIspzG1Y3HMzZ7W93NzrdM4AqQmvwsdZXueDJ5rPOjtfy6UcRKMoEsvmArcybvy8Cmr6v",
 });
-
 const Booking = () => {
   const [paitentName, setPaitentName] = useState("");
   const [reason, setReason] = useState("");
   const [speciality, setSpeciality] = useState("");
-  console.log(speciality);
   const [email, setEmail] = useState("");
+  const [gender, setGender] = useState("");
+  const [address, setAddress] = useState("");
+  const [to, setTo] = useState("");
+  console.log(to);
+  const body =
+    "SaarDOO coustumer serivce, Sorry for the inconvenience we are testing our sms service so yeah lol";
+  function sendSms() {
+    fetch(
+      `http://localhost:4000/send-text?recipient=${to}&textmessage=${body}`
+    ).catch((err) => console.error(err));
+  }
 
   async function mutate(mutations) {
     const result = await fetch(
@@ -40,8 +49,10 @@ const Booking = () => {
           _type: "appointment",
           paitent_name: paitentName,
           email: email,
-          reason: reason,
           speciality: speciality,
+          phone: to,
+          gender: gender,
+          address: address,
         },
       },
     ],
@@ -49,20 +60,22 @@ const Booking = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    mutate(mutations);
+    sendSms();
+    // mutate(mutations);
     setPaitentName("");
     setEmail("");
     setReason("");
     setSpeciality("");
+    setGender("");
+    setTo("");
+    setAddress("");
   };
 
   return (
     <div className="flex justify-center mt-5 ">
       <div className="border-b-black/30 border-b">
-        <div cla>
-          <p className="text-4xl text-black/70">
-            Search Doctor, Book Appointment
-          </p>
+        <div className="flex justify-center">
+          <p className="text-4xl text-black/70 ">Book Appointment</p>
         </div>
         <div className="mt-5 gap-10 max-w-7xl mx-auto flex items-center border-b py-5 ">
           {/* fiuirst */}
@@ -73,7 +86,7 @@ const Booking = () => {
               placeholder="Patient Name"
               value={paitentName}
               onChange={(e) => setPaitentName(e.target.value)}
-              className="outline-none  border border-black/60 px-5 py-2"
+              className="outline-none rounded-lg  border border-black/60 px-5 py-2"
             />
           </form>
           <div className="">
@@ -82,20 +95,30 @@ const Booking = () => {
               placeholder="Patient Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="outline-none  border border-black/60 px-5 py-2"
+              className="outline-none rounded-lg border border-black/60 px-5 py-2"
             />
           </div>
           <div
             onClick={!email ? null : handleSubmit}
-            className="bg-orange-500 px-5 py-1 text-white mt-8 "
+            className="bg-orange-500 px-3 rounded-lg py-1 text-white mt-8 "
           >
-            <p className="py-2 ">SUBMIT</p>
+            <p className="py-2 rounded-lg ">SUBMIT</p>
           </div>
         </div>
-        <div className="flex justify-center py-5  ">
-          <div className="border-b ">
-            <div className="border border-black/20 w-52 rounded-lg  p-5">
-              <p className="py-2 font-semibold">Speciality</p>
+        <div className="flex justify-between py-5  ">
+          <div className=" flex gap-10 ">
+            <div className="flex flex-col">
+              <p className="py-2 font-semibold">Phone</p>
+              <input
+                placeholder="+91578385"
+                value={to}
+                onChange={(e) => setTo(e.target.value)}
+                className="outline-none rounded-lg border border-black/60 px-5 py-2"
+              />
+            </div>
+
+            <div className="border flex flex-col border-black/20 w-52 rounded-lg  px-4 py-2 ">
+              <p className="py-2 font-semibold">Type of Test</p>
               <select
                 onChange={(e) => setSpeciality(e.target.value)}
                 value={speciality || ""}
@@ -107,19 +130,77 @@ const Booking = () => {
                 >
                   None
                 </option>
-                <option
-                  className="py-2 border-b border-b-black/10"
-                  value="cardio"
-                >
-                  Cardio
-                </option>
-                <option
-                  className="py-2 border-b border-b-black/10"
-                  value="drugs"
-                >
-                  Drugs
-                </option>
+                <optgroup label="Radiology">
+                  <option
+                    className="py-2 border-b border-b-black/10"
+                    value="radiology-ultrasound"
+                  >
+                    Ultrasound
+                  </option>
+                  <option
+                    className="py-2 border-b border-b-black/10"
+                    value="radiology-digital-xray"
+                  >
+                    Digital Xray
+                  </option>
+                </optgroup>
+                <optgroup label="Pathology">
+                  <option
+                    className="py-2 border-b border-b-black/10"
+                    value="pathology-blood-test"
+                  >
+                    Blood Test
+                  </option>
+                  <option
+                    className="py-2 border-b border-b-black/10"
+                    value="pathology-stool"
+                  >
+                    Stool
+                  </option>
+                </optgroup>
+                <optgroup label="Other">
+                  <option
+                    className="py-2 border-b border-b-black/10"
+                    value="other-urine-examination"
+                  >
+                    Urine Examination
+                  </option>
+                  <option
+                    className="py-2 border-b border-b-black/10"
+                    value="other-urine-examination"
+                  >
+                    Urine Examination
+                  </option>
+                </optgroup>
               </select>
+            </div>
+
+            <div className="p-2 border rounded-lg">
+              <p>Gender</p>
+              <select
+                className="border border-black/30 p-3 rounded-lg"
+                onChange={(e) => setGender(e.target.value)}
+                value={gender || ""}
+              >
+                <option value="null">Null</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center py-5   ">
+          <div className=" flex gap-10 ">
+            <div className="flex flex-col">
+              <p className="py-2 font-semibold">Address</p>
+              <textarea
+                placeholder="X6902 Y house, Z street"
+                value={address}
+                cols={60}
+                rows={5}
+                onChange={(e) => setAddress(e.target.value)}
+                className="outline-none rounded-lg w-full border border-black/60 px-5 py-2"
+              />
             </div>
           </div>
         </div>
