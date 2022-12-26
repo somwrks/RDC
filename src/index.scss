@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-* {
+*{
   transition: 0.3s ease-in-out;
 }
 
@@ -10,11 +9,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  // background: linear-gradient(rgb(219, 234, 254), rgb(147, 197, 253), rgb(59, 130, 246));
   background-repeat: no-repeat;
   background-size: cover;
-
-  &:before {
+  &:before{
     content: "";
     position: fixed;
     left: 0;
@@ -27,27 +24,29 @@ body {
 }
 
 
-#test-container {
+#test-container{
   align-items: center;
   justify-content: center;
 }
-
-.bar-of-progress {
+.bar-of-progress{
   position: absolute;
 }
-
-.active {
+.active{
   color: #5c83ff;
-  border-bottom: solid darkblue 2px;
+  border-bottom:solid darkblue 2px;
   font-weight: 500;
-  transition-property: all;
-  transition-duration: 100ms;
 }
-
-.passive {
+.passive{
   border: 0;
   color: black;
   font-weight: normal;
-  transition-property: all;
-  transition-duration: 100ms;
+}
+.service-bg{
+  background-image: url("./img/bloodtest.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.subservice{
+  justify-content: center;
+
 }

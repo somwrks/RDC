@@ -13,13 +13,13 @@ const Hours = () => {
   ];
   return (
     <div className="px-5 py-5 flex flex-wrap flex-col container">
-      <h1 className="text-6xl font-bold ">Office Hours</h1>
-      <div className=" mt-5 flex flex-wrap flex-row container bg-gradient-to-t from-green-200 to-blue-800 rounded-t-3xl">
+      <h1 className="text-6xl font-bold ">Clinic Hours</h1>
+      <div className=" mt-5 flex flex-wrap flex-row container  ">
         <div className="container max-w-3xl p-2 text-blue-100 font-light font-serif ">
           {Days.map((i, value) => {
             return (
               <div
-                className={`justify-between rounded-2xl mt-3 p-1 flex bg-gradient-to-b ${
+                className={`justify-between border rounded-2xl mt-3 p-1 flex bg-gradient-to-b ${
                   Days[value] === "Sunday"
                     ? "from-blue-100 to-red-400"
                     : "from-green-400 to-blue-400"
@@ -36,7 +36,7 @@ const Hours = () => {
           })}
         </div>
 
-        <div className="flex mt-5  p-3 text-blue-100 font-light font-serif ">
+        <div className="flex mt-5  p-3 text-blue-100 bg-gradient-to-t from-green-200 to-blue-800 rounded-t-3xl font-light font-serif ">
           <div className="text-5xl font-semibold ">
             <h2>From 8:30 am </h2>
             <h2>to 6 pm </h2>

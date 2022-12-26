@@ -31,7 +31,7 @@ const LargeCard = (props) => {
             </p>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative ">
           <div className=" bg-gradient-to-tr py-5 rounded-r-lg  from-blue-700 to-blue-300 rounded-tl-full ">
             <img
               className="w-96 scale-125 object-contain" alt="Hospital"
