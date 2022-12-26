@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../img/dang.png"
 
 function Header(props) {
   const loadcontent = props.load;
@@ -8,8 +9,8 @@ function Header(props) {
     <div className="flex justify-between p-10">
       {/* Logo */}
       <div>
-        <p className="text-sky-900 font-bold ">
-          <Link to="/" onClick={loadcontent}>RDC - Hospital</Link>
+        <p>
+          <Link to="/" onClick={loadcontent}><img className="logo" src={logo}alt="RDC" /></Link>
         </p>
       </div>
       {/* Right  */}
@@ -22,7 +23,7 @@ function Header(props) {
         </p>
         <p id="contact" >
        <Link to="/contact" onClick={loadcontent}>Contact Us</Link> </p>
-        <div className="bg-[#0e21fe] shadow-lg shadow-blue-700/60 px-5 rounded-full text-white py-2">
+        <div className="bg-[#0e21fe] book justify-center shadow-lg shadow-blue-700/60 px-5 rounded-full text-white py-2">
           <p id="book"><Link onClick={loadcontent} to="/book">Book Now</Link> </p>
         </div>
       </div>
