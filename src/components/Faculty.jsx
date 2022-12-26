@@ -147,7 +147,7 @@ const Faculty = () => {
   return (
         
         <div className=" border-blue-900 border-4 service-bg  mt-5 rounded-t-3xl flex flex-wrap flex-col">
-          <div className="mt-5 over-bg p-3 rounded-t-3xl">
+          <div className=" over-bg p-3 rounded-t-3xl">
             {category.map((value) => {
               return (
                 <>
@@ -189,13 +189,13 @@ const Faculty = () => {
                       {value ==="Radiology"?
                         <tr>
                           <td  className="p-3 border w-2/4 border-green-600">
-                            <a title="Test Available" href="https://google.com">
+                            <a title="Test Available" target="_blank" rel="noreferrer" href="https://google.com">
                             {Ultrasound.map((ultra)=>{
                                return( ultra +"\t")})}
                               </a> 
                           </td>
                           <td className="p-3 border w-2/4 border-green-600">
-                            <a title="Test Available" href="https://google.com">
+                            <a target="_blank" rel="noreferrer" title="Test Available" href="https://google.com">
                             {Xray.map((ultra)=>{
                                return( ultra +"\t")})}
                             </a>
@@ -205,7 +205,7 @@ const Faculty = () => {
                       {value ==="Pathology"?
                         <tr>
                           <td className="p-3 w-2/4 border border-green-600">
-                        <a title="Test Available" href="https://google.com">
+                        <a target="_blank" rel="noreferrer" title="Test Available" href="https://google.com">
                             {Bloodtest.map((ultra)=>{
                                return( ultra+"\t")})}
                                </a>
@@ -215,7 +215,7 @@ const Faculty = () => {
                       {value ==="Electrocardiogram"?
                         <tr>
                           <td className="p-3 w-2/4 border border-green-600">
-                        <a title="Test Available" href="https://google.com">
+                        <a target="_blank" rel="noreferrer" title="Test Available" href="https://google.com">
                             {Electrocardiogram.map((ultra)=>{
                                return( ultra+"\t")})}
                           </a>
