@@ -31,6 +31,21 @@ export default defineType({
       title: 'Date',
       type: 'string',
     }),
+    defineField({
+      name: 'phone',
+      title: 'Phone',
+      type: 'string',
+    }),
+    defineField({
+      name: 'gender',
+      title: 'Gender',
+      type: 'string',
+    }),
+    defineField({
+      name: 'address',
+      title: 'Address',
+      type: 'string',
+    }),
   ],
   // mutations: [
   //   defineMutation({
