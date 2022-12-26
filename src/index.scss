@@ -51,6 +51,7 @@ body {
 
 }
 .over-bg{
+  background-color: rgba(27, 63, 116, 0.493);
   backdrop-filter: blur(5px);
 }
 .logo{
@@ -64,4 +65,15 @@ body {
     
     width: 70%;
   }
+}
+textarea{
+  width: 50%;
+}
+.textarea{
+  align-items: center;
+}
+.doccenter{
+  justify-content: center;
+}.devcenter{
+  align-items: center;
 }

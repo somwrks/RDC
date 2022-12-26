@@ -1,10 +1,9 @@
 import React from "react";
-import Doctor from "./components/Doctor";
 import Faculty from "./components/Faculty";
 
 function About() {
-  const classes = [<Faculty/>,<Doctor/>]
-  const array =["Services","About" ];
+  const classes = [<Faculty/>]
+  const array =["Services" ];
 
   return (
     <>

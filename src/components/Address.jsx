@@ -31,7 +31,7 @@ export default function Address() {
                 Fatehpur, District - Barabanki, Uttar Pradesh.
               </p>
               <span>PIN- 225305 </span>
-              <span>Call - <a className="text-blue-300 hover:text-blue-900 underline" href="tel:05240297002" title="Phone Number">
+              <span>Call - <a className="text-blue-300 hover:text-blue-900 " href="tel:05240297002" title="Phone Number">
               05240297002
               </a></span>
             </div>
