@@ -7,7 +7,7 @@ export default function Contact() {
     <div className="px-5 py-5">
     <div className='flex flex-col  justify-center max-w-4xl mx-auto space-y-10'>
       <div className='flex justify-center items-center flex-col  '>
-        <p className='font-semibold text-6xl py-5'>Get In Touch.</p>
+        <p className='font-bold text-5xl py-5'>Get In Touch.</p>
         <p> Our team is determined to solve your problems. </p>
         <p> Contact us below!</p>
       </div>

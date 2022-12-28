@@ -41,6 +41,8 @@ const Booking = () => {
     console.log(json);
     return json;
   }
+  let temp = speciality.toString().replace("-","").replace("-","")
+  console.log(temp)
 
   const mutations = {
     mutations: [
@@ -71,11 +73,16 @@ const Booking = () => {
     setAddress("");
   };
 
+
+  // Constants for time
+
+  const time ={radiologyultrasound:"10:30AM - 4:00PM",pathologybloodtest:"8:30AM - 4:00PM",radiologydigitalxray:"8:30AM - 4:00PM",radiologyelectrocardiogram:"8:30AM - 4:00PM",}
+
   return (
     <div className="flex container justify-center mt-5 ">
       <div className="border-b-black/30 border-b">
         <div className="flex justify-center">
-          <p className="text-4xl text-black/70 ">Book Appointment</p>
+          <p className="font-bold text-5xl py-5 text-center ">Book Appointment</p>
         </div>
         <div className="mt-5 gap-10 max-w-7xl mx-auto flex flex-wrap flex-col items-center border-b py-5 ">
           {/* fiuirst */}
@@ -179,6 +186,12 @@ const Booking = () => {
                   </option>
                 </optgroup>
               </select>
+              <p className="py-2 font-semibold">Time of appointment</p>
+              <div id="result">
+                {
+                 time[temp]
+                }
+              </div>
             </div>
           <div
             onClick={!email ? null : handleSubmit}
