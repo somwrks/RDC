@@ -75,7 +75,7 @@ const Booking = () => {
     <div className="flex container justify-center mt-5 ">
       <div className="border-b-black/30 border-b">
         <div className="flex justify-center">
-          <p className="text-4xl text-black/70 ">Book Appointment</p>
+          <p className="font-bold text-5xl py-5 text-center ">Book Appointment</p>
         </div>
         <div className="mt-5 gap-10 max-w-7xl mx-auto flex flex-wrap flex-col items-center border-b py-5 ">
           {/* fiuirst */}
