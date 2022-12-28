@@ -63,7 +63,13 @@ body {
 @media (max-width: 799px) {
   .logo{
     
-    width: 70%;
+    width: 100%;
+  }
+  .banner{
+    display: none;
+  }
+  .head-1{
+    background-image: url("https://img.freepik.com/free-vector/health-professional-team_52683-36023.jpg?w=2000");
   }
 }
 textarea{

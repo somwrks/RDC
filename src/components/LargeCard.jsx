@@ -7,7 +7,7 @@ const LargeCard = (props) => {
   return (
     <div className="px-5 py-5">
       <h1 className="text-[#225dba] px-5 ">Raj Diagnostic Center</h1>
-      <div className="flex justify-between py-5" >
+      <div className="flex head-1 justify-between py-5" >
         <div className="text-6xl font-semibold ">
           <p>
             WE <span className="font-bold">CARE</span>
@@ -34,7 +34,7 @@ const LargeCard = (props) => {
         <div className="relative ">
           <div className=" bg-gradient-to-tr py-5 rounded-r-lg  from-blue-700 to-blue-300 rounded-tl-full ">
             <img
-              className="w-96 scale-125 object-contain" alt="Hospital"
+              className="w-96 scale-125 object-contain banner" alt="Hospital"
               src="https://img.freepik.com/free-vector/health-professional-team_52683-36023.jpg?w=2000"
             />
           </div>
