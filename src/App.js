@@ -88,7 +88,6 @@ function App() {
 
   return (
     <>
-      
       <Online>
 
           <div className="max-w-7xl  mx-auto">
