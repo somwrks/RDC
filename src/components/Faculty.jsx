@@ -1,153 +1,81 @@
 import React from "react";
 const Faculty = () => {
   const category = ["Radiology", "Pathology", "Electrocardiogram"];
-  const radsub = ["Ultrasound", "Digital Xray"];
-  const patsub = ["Blood tests"];
+  const radsub = ["Ultrasound", "Digital+Xray"];
+  const patsub = ["Blood Tests"];
   const ecgsub = ["Electrocardiogram"];
 
   const Ultrasound = [
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
+    "Upper+Abdomen+Ultrasound",
+    "Lower+Abdomen+Ultrasound",
+    "Pelvis+Ultrasound",
+    "KUB+Ultrasound",
+    "Neck+Ultrasound",
+    "Thyroid+Ultrasound",
+    "Obstetric+Ultrasound",
+    "TIFFA+Ultrasound",
+    "Scrotal+Ultrasound",
+    "Testicular+Ultrasound",
+    "Inguinoscrotal+Ultrasound",
+    "High+Resolution+Ultrasound",
+    "Sono+Mammography+Ultrasound",
+    "TVS+Ultrasound",
+    "Pediatric+Ultrasound",
+    "Small+Parts+Ultrasound",
+    "Color+Doppler",
+    "...",
   ];
   const Xray = [
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
+    "Chest+Xray",
+    "Abdomen+Xray",
+    "Head+Xray",
+    "Spine+Xray",
+    "Hand+Xray",
+    "Forearm+Xray",
+    "Arm+Xray",
+    "Elbow+Xray",
+    "Wrist+Xray",
+    "Foot+Xray",
+    "Leg+Xray",
+    "Thigh+Xray",
+    "Knee+Xray",
+    "Ankle+Xray",
+    "Hip+Xray",
+    "Shoulder+Xray",
+    "Pelvis+Xray",
+    "...",
   ];
   const Bloodtest = [
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
+    "Complete+Blood+Count+Test",
+    "Hemoglobin+Test",
+    "TLC+Test",
+    "DLC+Test",
+    "ESR+Test",
+    "Blood Group+Test",
+    "LFT+Test",
+    "KFT+Test",
+    "PT+Test",
+    "PC+Test",
+    "INR+Test",
+    "Sugar F+Test",
+    "PP+Test",
+    "Random+BT+CT+Test",
+    "Thyroid+Profile+Test",
+    "Lipid Profile+Test",
+    "Hormone+Test",
+    "Stool Routine & Special+Test",
+    "Urine Routine & Microscopic, Culture & Senstivity+Test",
+    "ANA+Test",
+    "Pleural+Test",
+    "Ascitis Fluid+Test",
+    "PAP Smear+Test",
+    "FNAC+Test",
+    "BIOPSY+Test",
+    "...",
   ];
   const Electrocardiogram = [
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
+    "Indoor+Electrocardiogram",
+    "Outer+Electrocardiogram",
   ];
 
   return (
@@ -203,9 +131,9 @@ const Faculty = () => {
                             title="Test Available"
                             target="_blank"
                             rel="noreferrer"
-                            href="https://google.com"
+                            href={ultra!=="..."?`https://www.google.com/search?q=${ultra}+&sxsrf=ALiCzsZS-t3lldqjUfvOP6XYe8A3SHhh4Q%3A1672314785135&ei=oX-tY6rqB5jF3LUP7tmA6Ag&ved=0ahUKEwjqvuGF4p78AhWYIrcAHe4sAI0Q4dUDCA8&uact=5&oq=Upper+Abdomen+Ultrasound+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoKCAAQRxDWBBCwA0oECEEYAEoECEYYAFDCAljCAmDQBGgCcAF4AIABpgGIAaYBkgEDMC4xmAEAoAEByAEIwAEB&sclient=gws-wiz-serp`:"https://www.google.com/search?q=Radiology+tests+&sxsrf=ALiCzsZS-t3lldqjUfvOP6XYe8A3SHhh4Q%3A1672314785135&ei=oX-tY6rqB5jF3LUP7tmA6Ag&ved=0ahUKEwjqvuGF4p78AhWYIrcAHe4sAI0Q4dUDCA8&uact=5&oq=Upper+Abdomen+Ultrasound+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoKCAAQRxDWBBCwA0oECEEYAEoECEYYAFDCAljCAmDQBGgCcAF4AIABpgGIAaYBkgEDMC4xmAEAoAEByAEIwAEB&sclient=gws-wiz-serp"}
                           >
-                               {ultra + "\t"}
+                               {ultra.replaceAll("+"," ").concat(",") + "\t"}
                           </a>
                     )})}
                         </td>
@@ -216,9 +144,9 @@ const Faculty = () => {
                             target="_blank"
                             rel="noreferrer"
                             title="Test Available"
-                            href="https://google.com"
+                            href={ultra!=="..."?`https://www.google.com/search?q=${ultra}+&sxsrf=ALiCzsZS-t3lldqjUfvOP6XYe8A3SHhh4Q%3A1672314785135&ei=oX-tY6rqB5jF3LUP7tmA6Ag&ved=0ahUKEwjqvuGF4p78AhWYIrcAHe4sAI0Q4dUDCA8&uact=5&oq=Upper+Abdomen+Ultrasound+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoKCAAQRxDWBBCwA0oECEEYAEoECEYYAFDCAljCAmDQBGgCcAF4AIABpgGIAaYBkgEDMC4xmAEAoAEByAEIwAEB&sclient=gws-wiz-serp`:"https://www.google.com/search?q=Pathology+tests+&sxsrf=ALiCzsZS-t3lldqjUfvOP6XYe8A3SHhh4Q%3A1672314785135&ei=oX-tY6rqB5jF3LUP7tmA6Ag&ved=0ahUKEwjqvuGF4p78AhWYIrcAHe4sAI0Q4dUDCA8&uact=5&oq=Upper+Abdomen+Ultrasound+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoKCAAQRxDWBBCwA0oECEEYAEoECEYYAFDCAljCAmDQBGgCcAF4AIABpgGIAaYBkgEDMC4xmAEAoAEByAEIwAEB&sclient=gws-wiz-serp"}
                           >
-                               {ultra + "\t"}
+                               {ultra.replaceAll("+"," ").concat(",") + "\t"}
                           </a>
                     )})}
                         </td>
@@ -235,9 +163,9 @@ const Faculty = () => {
                             target="_blank"
                             rel="noreferrer"
                             title="Test Available"
-                            href="https://google.com"
+                            href={`https://www.google.com/search?q=${ultra}+&sxsrf=ALiCzsZS-t3lldqjUfvOP6XYe8A3SHhh4Q%3A1672314785135&ei=oX-tY6rqB5jF3LUP7tmA6Ag&ved=0ahUKEwjqvuGF4p78AhWYIrcAHe4sAI0Q4dUDCA8&uact=5&oq=Upper+Abdomen+Ultrasound+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoKCAAQRxDWBBCwA0oECEEYAEoECEYYAFDCAljCAmDQBGgCcAF4AIABpgGIAaYBkgEDMC4xmAEAoAEByAEIwAEB&sclient=gws-wiz-serp`}
                           >
-                              {ultra + "\t"}
+                               {ultra.replaceAll("+"," ").concat(",") + "\t"}
                           </a>
                     )})}
                         </td>
@@ -256,7 +184,7 @@ const Faculty = () => {
                             title="Test Available"
                             href="https://google.com"
                           >
-                              { ultra + "\t"}
+                               {ultra.replaceAll("+"," ").concat(",") + "\t"}
                           </a>
                     )})}
                         </td>
